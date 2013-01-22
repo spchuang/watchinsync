@@ -1,0 +1,226 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0b0d0b;
+	color: #ebb35a;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: Tahoma,Geneva,Kalimati,sans-serif;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style: none;
+}
+#main_wrap{
+	width: 900px;
+	height: 600px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	border: 3px solid 006699;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #161a1a;
+}
+#top_wrap{
+	width: 900px;
+	height:18px;
+	padding: 4px 0;
+	position: absolute;
+	top: 0;
+	left:0;
+	border-bottom: 3px solid 006699;
+	
+}
+#top_wrap #link_wrap{
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+}
+
+#top_wrap #link{
+	width: 250px;
+	padding:0;
+	text-align: center;
+	height: 18px;
+	line-height: 18px;
+}
+/*Side Wrap Style*/
+#chat_wrap{
+	width: 900px;
+	height:170px;
+	position: absolute;	
+	bottom: 0;
+	border-top: 3px solid 006699;	
+}
+#user_wrap{
+   width:200px;
+   height: 170px;
+   position:absolute;
+   left:0;
+   border-right: 3px solid 006699;
+}
+#users{
+   width: 190px;
+   height: 140px;
+   padding: 5px;
+   overflow: hidden;
+}
+#conversation_wrap{
+   height:170px;
+   width: 700px;
+   position: absolute;
+   left:200px;
+   
+}
+#conversation{
+   width: 680px;
+   padding: 5px 10px;
+   height: 110px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+#conversation li{
+	background-color: inherit;
+}
+#conversation li:nth-child(odd){
+	background-color: #1d1d1a;
+}
+#conversation li:nth-child(even){
+
+}
+
+#input_message{
+	height: 50px;
+}
+#data{
+	margin: 5px;
+	width: 692px;
+}
+#datasend{
+	margin: 0px;
+	widtH: 50px;
+}
+.title{
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 20px;
+	line-height: 20px;
+	border-bottom: 3px solid 006699;
+	color:white;
+}
+/*Main content*/
+#content_wrap{
+	width: 900px;
+	height: 400px;
+	position: absolute;
+	left: 0;
+	top: 22px;
+	
+}
+#video_wrap{
+	width: 650px;
+	height: 400px;
+	position: absolute;
+	
+	left: 0;
+	top: 8px;
+}
+#video{
+	width: 560px;
+	height: 330px;
+	margin: 0 auto;
+	margin-top: 15px;
+	background-color: white;
+	overflow: hidden;
+	
+}
+#video:hover{
+	cursor: pointer;
+}
+/*buttoms style*/
+#video_control{
+	width: 560px;
+	padding: 0px 45px;
+	height: 40px;
+	position: absolute;
+	bottom: 15px;
+	left:0;
+	
+}
+
+.bottoms{
+	float: left;
+	margin: 0 3px;
+}
+.bottoms:hover{
+	cursor:pointer;
+}
+.bottoms img{
+	width: 50px;
+	height:50px;
+}
+/*end*/
+
+#suggest{
+	width: 245px;
+	height: 30px;
+	padding: 20px 5px 0 5px;
+	position: absolute;
+	right:0px;
+	bottom:-8px;
+	border-left: 3px solid 006699;
+}
+#suggest_video{
+	width: 100%;
+	
+}
+#video_list{
+	width: 245px;
+	height: 360px;
+	padding: 5px 5px 5px 5px;
+	position: absolute;
+	right: 0;
+	top:5px;
+	border-left: 3px solid 006699;
+	overflow-y: scroll;
+}
+#video_list li{
+	width: 240px;
+	height: 90px;
+	padding: 5px 0;
+	border-bottom: 1px solid grey;
+	position: relative;
+}
+#video_list li img{
+	height: 90px;
+	widtH: 120px;
+	float: left;
+}
+#video_list li #vid_title{
+	height: 30px;
+	width: 120px;
+	line-height: 30px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: absolute;
+	left: 125px;
+	top: 15px;
+}
+#video_list li #vid_count{
+	height: 30px;
+	line-height: 30px;
+	width: 120px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: absolute;
+	left:125px;
+	bottom: 15px;
+}

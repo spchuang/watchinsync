@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title>WatchInSync Room</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="/include/bootstrap-tooltip.js"></script>
+	<script src="/include/bootstrap-popover.js"></script>
+	<script src="/include/jquery.collapse.js"></script>
+	<script src="http://staging.tokbox.com/v0.91/js/TB.min.js"></script>
+
+	<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-twipsy.js"></script>
+	<script src="/include/client.js" ></script>
+	<script src="/include/youtube.js"></script>
+	
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" 	type="text/css"/>	
+	<link href="/include/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/include/room_style.css" rel="stylesheet" type="text/css"/>
+	<style>
+
+</style>
+<!--<link rel="stylesheet" type="text/css" href="/include/style.css" />!-->
+</head>
+
+<body>
+	<div id="pre_load_overlay">	
+		<div id="pre_load">
+			<img id='pre_load_ajax-loader' src='/include/ajax-loader.gif'/>
+			<p id="loading_msg">
+				Connecting to Server...
+			</p>
+		</div>
+	</div>
+	<!-- Navigation Bar !-->
+	<div class="navbar navbar-inverse navbar-fixed-top" style="position:absolute">
+      <div class="navbar-inner">
+        <div class="container">
+          	<a class="brand" href="/">WatchInSync</a>
+   			
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <!--<li><a href="#about">Rooms</a></li>!-->
+              <li><a id="contact" target="_blank" href="http://www.emailmeform.com/builder/form/2R70ybBP03mE9fns6e">Contact</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+            
+    		<ul class="nav pull-right">
+        		<li>
+        			<a href="#share" title="Copy and share this link" >Share this room</a>
+        			<div id="share_link" class="hidden_div">
+        				<input id="link" type="text" readonly="readonly"/>
+        			</div>
+        		</li>
+      	 	</ul>
+
+        </div>
+	  </div>
+      
+    </div>
+    <div id="video_wrap" class="container"> 
+    	
+		<div id="video">
+			<div id="viedo_control_warp">
+				<div id="video_control">
+				
+					<div class="bottoms" id="start">
+						<img src="/include/play.png"/>
+					</div>
+					<div class="bottoms" id="pause"><img src="/include/pause.png"/></div>
+					<div class="bottoms" id="stop"><img src="/include/stop.png"/></div>
+					<div class="bottoms" id="video_slider"></div>
+					<div class="bottoms" id="volumeChange">
+						<img src="/include/unmute.png"/>
+						<div id="volume"></div>
+					</div>
+
+				</div>
+			</div>
+			<div id="youtubePlayer"></div>
+		</div>
+		<div id="video_list_wrap">
+
+			<h4 style="margin: 0">Playlist</h4>
+			<hr style="margin: 3px 0;">
+			<div id="suggest" class="btn large primary btn-primary suggest_close">
+				Add Video!
+	
+				<div id="content" class="hidden_div">
+					<div id="current_vid" class="hidden_div"></div>
+				<!--Content for video suggestion!-->
+					<div id="collapse_option">
+				    	<h4 class="title open">Youtube Link</h4>
+				   		<div class="option_content">
+				   			<input id="suggest_video" onkeypress="insertVideo(this.value,event)"/>
+				   		</div>
+			
+		
+				    	<h4 class="title">Related Video</h4>
+				    	<div id="suggest_related_video" class="option_content video_wrap">details...</div>
+						<h4 class="title">Playlist History</h4>
+				    	<div id="playlist_history" class="option_content video_wrap">details...</div>
+					</div>
+					
+				</div>
+			</div>
+			<hr style="margin: 3px 0;">
+			<ul id="video_list">
+			
+			</ul>
+		</div>
+	</div>
+	
+	
+    <div id="chat_wrap" class="container">
+		<div class="row"> 
+			<div class="span3">
+				<ul class="nav nav-list" id="room_wrap" style="margin: 0 5px;">
+					
+					<li class="nav-header">Room: <span id = "rooms"></span></li>
+					<hr style="margin: 1px 0;">
+			   		<li class="nav-header">USER</li>
+			
+					<span id="users">
+					
+					</span>
+					
+				</ul>
+			</div>
+			<div class="span9">
+			 	<div id="conversation_wrap">
+			 		
+					<li class="nav-header">Chat</li>
+					<hr style="margin: 1px 0;">
+					<ul id="conversation" >
+					
+					</ul>
+					
+					<div id ="conversation_input">
+						<hr style="margin: 1px 0;">
+						<input class="input-xxlarge" id="data" type="text" placeholder="say something…">
+					</div>
+
+				</div>
+			</div>
+		</div>
+     </div>
+	<div id="start_vchat" class="vchat_closed">
+		<h3>Start Video Chat</h3>
+	</div>
+
+
+</div>
+</body>
+
+</html>

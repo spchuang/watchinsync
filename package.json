@@ -1,0 +1,18 @@
+
+
+{
+
+  "name":"watchInSync",
+
+  "version":"0.0.1",
+
+  "dependencies":{
+
+    "express": "2.5.9",
+  "socket.io":   "0.9.13",
+  "cookie":  "0.0.4"
+
+  },
+  "engine": "node 0.8.16"
+
+}

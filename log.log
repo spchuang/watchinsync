@@ -1,0 +1,34 @@
+9/1/12
+-updated new video list
+
+
+TODO
+- emoticon
+- video chat
+- show relevant youtube videos
+- download video history (show)
+- remove video from list
+- video in playlist order
+- see if someone is typing
+- when someone chat, sound effect
+ - "typing…" sign on chat
+ 
+ 
+ - bootstrap tooltip from instructions
+ - full screen mode
+ http://gdata.youtube.com/feeds/api/videos/WbJhWg4URas/related?v=2&alt=jsonc
+ 
+ 
+ add optional vchat.
+ link to playlist
+ play video (not in order)
+ link to original video?
+ 
+ 
+ firefox 7.0.1 problem
+ 
+ 
+ firefox 15 GOOD
+ firefox 3.6.27 NO
+ firefox 12.0
+ 
